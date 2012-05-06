@@ -12,9 +12,17 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
 </head>
-<body>
+<body class="<%= controller.controller_name %>-<%= controller.action_name %>">
+
+  <div class="container home main-content">
+
+      <div class="row">
 
     <%= yield %>
+
+      </div>
+
+  </div>
 
 
     <script type="application/x-javascript"> 
