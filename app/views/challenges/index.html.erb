@@ -18,8 +18,10 @@
     <td><%= challenge.time %></td>
     <td><%= challenge.challenge_id %></td>
     <td><%= link_to 'Show', challenge %></td>
+    <% if admin_signed_in?  %>
     <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>
     <td><%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

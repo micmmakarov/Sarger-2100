@@ -4,8 +4,11 @@
 <%=  challenge.description %>
 
   <%= link_to 'Show', challenge %>
-  <%= link_to 'Edit', edit_challenge_path(challenge) %>
-  <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %>
+
+  <% if admin_signed_in?  %>
+      <%= link_to 'Edit', edit_challenge_path(challenge) %>
+      <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %>
+  <% end %>
 
 
 
