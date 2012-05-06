@@ -1,0 +1,17 @@
+Add child:<br>
+<%= form_for(Challenge.new(:challenge_id => @challenge.id),
+             remote: true, class: 'follow') do |f| %>
+
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_area :description %>
+    </div>
+    <%= f.hidden_field :challenge_id, :value => @challenge.id %>
+
+
+    <%= f.submit "Follow this organisation", class: "btn-follow  btn btn-primary btn-small" %>
+<% end %>

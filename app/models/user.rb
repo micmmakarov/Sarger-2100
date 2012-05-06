@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
-  has_many :challenges, :through => :users_challenges
+  has_many :progresses
+  has_many :challenges, :through => :progresses
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -10,11 +11,11 @@ class User < ActiveRecord::Base
 
 
   def complete?(challenge)
-    users_challenges.find_by_user_id(id)
+    self.progresses.find_by_challenge_id(challenge.id)
   end
 
   def complete!(challenge)
-    users_challenges.create!(user_id:id,challenge_id:chalenge.id)
+    Progress.create!(user_id:id,challenge_id:challenge.id)
   end
 
   def start!(challenge)

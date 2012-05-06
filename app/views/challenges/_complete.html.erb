@@ -1,0 +1,18 @@
+COMPLETE:
+<% if user_signed_in? then %>
+
+    <div class="complete_<%= ch.id %>">
+
+      <%	url= "/complete/" +  ch.id.to_s	%>
+      <%= form_for(ch, :url => url,
+                   html: { method: :post }, class: 'complete_form',
+                   remote: true) do |f| %>
+          <% if current_user.complete?(ch) then %>
+              <%= f.submit "UNCOMPLETE", class: "BUTTON CLASS HERE" %>
+          <% else %>
+              <%= f.submit "CMPLETE", class: "BUTTON CLASS HERE" %>
+          <% end %>
+      <% end %>
+    </div>
+
+<% end %>

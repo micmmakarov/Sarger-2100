@@ -2,6 +2,15 @@
   <%= challenge.id %><br>
   <%= challenge.title %><br>
 <%=  challenge.description %>
+  <!-- compleate?? -->
+  COMPLETE: <%= render :partial => "complete", :locals => {:ch => challenge} %>
+
+
+  <% if current_user.complete?(challenge) %>
+    Mission Compleated!!! Yahoo!!
+  <% else %>
+
+  <% end %>
 
   <%= link_to 'Show', challenge %>
 

@@ -4,6 +4,7 @@ Sarger::Application.routes.draw do
   devise_for :users
 
   get "home/index"
+  post 'complete/:id' => "progresses#create"
 
   resources :challenges
 
