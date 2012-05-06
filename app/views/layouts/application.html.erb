@@ -3,12 +3,47 @@
 <head>
   <title>Sarger</title>
   <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "main" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
 </head>
 <body>
 
-<%= yield %>
+    <%= yield %>
+
+
+    <script type="application/x-javascript"> 
+
+       addEventListener("load", function() 
+       { 
+       setTimeout(updateLayout, 0); 
+       }, false); 
+
+       var currentWidth = 0; 
+
+       function updateLayout() 
+       { 
+       if (window.innerWidth != currentWidth) 
+       { 
+       currentWidth = window.innerWidth; 
+
+       var orient = currentWidth == 320 ? "profile" : "landscape"; 
+       document.body.setAttribute("orient", orient); 
+       setTimeout(function() 
+       { 
+       window.scrollTo(0, 1); 
+       }, 100); 
+       } 
+       } 
+
+       setInterval(updateLayout, 100); 
+
+     </script>
 
 </body>
 </html>
