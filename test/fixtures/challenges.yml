@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  time: 2012-05-05 19:40:36
+  challenge_id: 1
+
+two:
+  title: MyString
+  description: MyText
+  time: 2012-05-05 19:40:36
+  challenge_id: 1

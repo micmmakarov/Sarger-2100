@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+
+<%=  render :partial => "show", :locals => {:challenge => @challenge} %>
+
+<p>
+  <b>Title:</b>
+  <%= @challenge.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @challenge.description %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @challenge.time %>
+</p>
+
+<p>
+  <b>Challenge:</b>
+  <%= @challenge.challenge_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
+<%= link_to 'Back', challenges_path %>

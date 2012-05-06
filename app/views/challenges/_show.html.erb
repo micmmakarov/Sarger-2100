@@ -1,0 +1,20 @@
+<div style="margin-left:20px;background:#EEEEEE;">
+  <%= challenge.id %><br>
+  <%= challenge.title %><br>
+<%=  challenge.description %>
+
+  <%= link_to 'Show', challenge %>
+  <%= link_to 'Edit', edit_challenge_path(challenge) %>
+  <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %>
+
+
+
+<% challenge.challenges.each do |c| %>
+
+<%=  render :partial => "show", :locals => {:challenge => c} %>
+
+<% end %>
+
+
+
+</div>
