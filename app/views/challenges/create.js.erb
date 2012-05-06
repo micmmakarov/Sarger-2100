@@ -1,1 +1,1 @@
-$(".challenges").html("!!!<%=  escape_javascript(render :partial => "show", :locals => {:challenge => @challenge.challenge}) %>");
+$(".challenges").html("<%=  escape_javascript(render :partial => "show", :locals => {:challenge => @challenge.challenge}) %>");

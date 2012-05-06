@@ -1,5 +1,7 @@
 class ChallengesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :authenticate_admin!, :except => [:show, :index]
+
   # GET /challenges
   # GET /challenges.json
   def index

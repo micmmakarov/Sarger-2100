@@ -1,1 +1,1 @@
-$(".complete_<%= @challenge.id %>").html("COMPLETE");
+$(".complete_<%= @challenge.id %>").html("<%=  escape_javascript(render :partial => "challenges/complete", :locals => {:ch => @challenge}) %>");

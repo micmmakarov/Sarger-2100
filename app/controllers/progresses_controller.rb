@@ -4,7 +4,7 @@ class ProgressesController < ApplicationController
   def create
     @challenge = Challenge.find(params[:id])
     if current_user.complete?(@challenge)
-      current_user.complete!(@challenge)
+      current_user.uncomplete!(@challenge)
     else
       current_user.complete!(@challenge)
     end
