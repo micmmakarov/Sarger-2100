@@ -14,6 +14,7 @@ class ChallengesController < ApplicationController
   # GET /challenges/1.json
   def show
     @challenge = Challenge.find(params[:id])
+    @new_challenge = Challenge.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -41,9 +42,9 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(params[:challenge])
-
     respond_to do |format|
       if @challenge.save
+        format.js { render "challenges/create.js" }
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
         format.json { render json: @challenge, status: :created, location: @challenge }
       else
