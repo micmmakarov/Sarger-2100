@@ -23,13 +23,7 @@
 
 <% challenge.challenges.each do |c| %>
 
-      <div style="margin-left:20px;background:#EEEEEE;">
-        <%= c.id %><br>
-        <%= c.title %><br>
-        <%=  c.description %>
-        COMPLETE: <%= render :partial => "complete", :locals => {:ch => c} %>
-
-      </div>
+<%=  render :partial => "tree", :locals => {:challenge => c} %>
 
 <% end %>
 

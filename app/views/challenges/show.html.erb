@@ -1,12 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <div class=challenges>
-<%=  render :partial => "show", :locals => {:challenge => @challenge} %>
+  <% if admin_signed_in?  %>
+  <%=  render :partial => "tree", :locals => {:challenge => @challenge} %>
+  <% else %>
+      <%=  render :partial => "show", :locals => {:challenge => @challenge} %>
+<% end %>
 </div>
 
 <% if admin_signed_in?  %>
 
-    <% render "add_challenge" %>
+    <%= render "add_challenge" %>
 
     <!-- edit current challenge links -->
     <%= link_to 'Edit', edit_challenge_path(@challenge) %> |

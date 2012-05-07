@@ -5,7 +5,7 @@ class ChallengesController < ApplicationController
   # GET /challenges
   # GET /challenges.json
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.where(:challenge_id => nil)
 
     respond_to do |format|
       format.html # index.html.erb
