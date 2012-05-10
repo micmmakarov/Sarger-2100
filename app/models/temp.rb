@@ -15,7 +15,7 @@ class Temp < ActiveRecord::Base
   end
 
   def complete!(challenge)
-    Progress.create!(temp_id:id,challenge_id:challenge.id)
+    Progress.create!(:temp_id => id, :challenge_id => challenge.id)
   end
 
   def uncomplete!(challenge)
