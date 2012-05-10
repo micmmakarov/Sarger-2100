@@ -6,7 +6,7 @@
   COMPLETE: <%= render :partial => "complete", :locals => {:ch => challenge} %>
 
 
-  <% if current_user.complete?(challenge) %>
+  <% if current_guy.complete?(challenge) %>
     Mission Compleated!!! Yahoo!!
   <% else %>
 

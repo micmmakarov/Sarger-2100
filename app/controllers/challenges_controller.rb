@@ -1,5 +1,13 @@
 class ChallengesController < ApplicationController
-  before_filter :authenticate_user!
+  #before_filter :authenticate_user!
+
+  before_filter :maybe_authenticate_user
+
+  def maybe_authenticate_user
+    authenticate_temp! if not in?
+  end
+
+
   before_filter :authenticate_admin!, :except => [:show, :index]
 
   # GET /challenges

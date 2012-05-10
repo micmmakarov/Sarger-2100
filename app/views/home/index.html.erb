@@ -12,7 +12,10 @@
     <br>
     <br>
     <br>
-    <% if user_signed_in? %>>
+    <% if temp_signed_in? %>
+        Welcome temporary, <%= current_temp.name %>
+    <% end %>
+        <% if user_signed_in? %>
     Welcome, <%= current_user.name %>
     Link for logout!
     <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
