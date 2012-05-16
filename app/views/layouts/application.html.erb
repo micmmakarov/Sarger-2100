@@ -18,6 +18,10 @@
 
       <div class="row">
 
+        <% if in? %>
+        <h1><%= current_guy.name %></h1>
+         <% end %>
+        
     <%= yield %>
 
       </div>

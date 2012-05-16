@@ -7,8 +7,8 @@
   <%= render :partial => "complete", :locals => {:ch => challenge} %>
 
 
-  <% if current_user.complete?(challenge) %>
-    Mission Completed!!! Yahoo!!
+  <% if current_guy.complete?(challenge) %>
+  Mission Completed!!! Yahoo!!
   <% else %>
 
   <% end %>
@@ -26,6 +26,13 @@
 <% challenge.challenges.each do |c| %>
 
 <li style="margin-left:60px;">
+      <div style="margin-left:20px;background:#EEEEEE;">
+        <%= c.id %><br>
+        <%= c.title %><br>
+        <%=  c.description %>
+        COMPLETE: <%= render :partial => "complete", :locals => {:ch => c} %>
+
+      </div>
 
 <%=  render :partial => "show", :locals => {:challenge => c} %>
 

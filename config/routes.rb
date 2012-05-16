@@ -1,4 +1,8 @@
 Sarger::Application.routes.draw do
+  devise_for :temps
+
+  resources :temps
+
   devise_for :admins
 
   devise_for :users
