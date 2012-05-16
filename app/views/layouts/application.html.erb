@@ -16,17 +16,19 @@
 
   <div class="container main-content style-green">
 
-      <div class="row">
+    <div class="row">
 
-        <% if in? %>
-        <h1><%= current_guy.name %></h1>
-         <% end %>
-        
     <%= yield %>
 
-      </div>
+    </div>
+
+    <% if in? %>
+    <p>Current user: <%= current_guy.name %></p>
+    <% end %>
 
   </div>
+
+  
 
     <script type="application/x-javascript"> 
 

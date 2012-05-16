@@ -7,18 +7,14 @@
         <p>Overcome approach anxiety</p>
       </hgroup>
 
-    <%= link_to "Start the Game", "/challenges", :class => "button" %>
+      <% if temp_signed_in? %>
+        <p>Welcome, <%= current_temp.name %> (signed in as a guest)</p>
+      <% end %>
 
-    <br>
-    <br>
-    <br>
+    <%= link_to "Start the Game", "/challenges", :class => "button nice green" %>
+
     <% if temp_signed_in? %>
-        Welcome temporary, <%= current_temp.name %>
-    <% end %>
-        <% if user_signed_in? %>
-    Welcome, <%= current_user.name %>
-    Link for logout!
-    <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+      <p><%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
     <% end %>
   </div>
 

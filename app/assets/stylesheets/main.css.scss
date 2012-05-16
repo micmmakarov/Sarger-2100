@@ -27,11 +27,6 @@ body {
 .challenge-list li {
   position: relative;
 }
-.challenge-list li input.button {
-  position: absolute;
-  top: 10px;
-  right: 10px
-}
 
 input[type=text], input[type=email], input[type=password] {
   font-family: Helvetica, Arial, sans-serif;
@@ -50,11 +45,28 @@ input[type=checkbox] {
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px) {
   
-  
   form .row label {
     display: none;
+  }
+  form label {
+    font-size: 17px;
   }
   form .row {
     margin-bottom: 20px;
   }
+  button.button, input[type="submit"].button,
+  a.button {
+    font-size: 1.6em;
+  }
+  .challenge-list {
+    li {
+      input.button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        max-width: 40%;
+      }
+    }
+  } 
+  
 }
