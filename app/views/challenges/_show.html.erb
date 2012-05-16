@@ -1,13 +1,14 @@
-<div style="margin-left:20px;background:#EEEEEE;">
-  <%= challenge.id %><br>
-  <%= challenge.title %><br>
+<ul class="challenge-list">
+<li>
+  <h4><%= challenge.title %></h4>
+
 <%=  challenge.description %>
   <!-- compleate?? -->
-  COMPLETE: <%= render :partial => "complete", :locals => {:ch => challenge} %>
+  <%= render :partial => "complete", :locals => {:ch => challenge} %>
 
 
   <% if current_user.complete?(challenge) %>
-    Mission Compleated!!! Yahoo!!
+    Mission Completed!!! Yahoo!!
   <% else %>
 
   <% end %>
@@ -19,14 +20,17 @@
       <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %>
   <% end %>
 
+</li>
 
 
 <% challenge.challenges.each do |c| %>
 
+<li style="margin-left:60px;">
+
 <%=  render :partial => "show", :locals => {:challenge => c} %>
+
+</li>
 
 <% end %>
 
-
-
-</div>
+</ul>

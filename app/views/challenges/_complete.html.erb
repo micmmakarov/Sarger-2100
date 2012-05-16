@@ -1,4 +1,3 @@
-COMPLETE:
 <% if user_signed_in? then %>
 
     <div class="complete_<%= ch.id %>">
@@ -8,9 +7,9 @@ COMPLETE:
                    html: { method: :post }, class: 'complete_form',
                    remote: true) do |f| %>
           <% if current_user.complete?(ch) then %>
-              <%= f.submit "UNCOMPLETE", class: "BUTTON CLASS HERE" %>
+              <%= f.submit "Undo", class: "button white nice small" %>
           <% else %>
-              <%= f.submit "CMPLETE", class: "BUTTON CLASS HERE" %>
+              <%= f.submit "Complete", class: "button nice small" %>
           <% end %>
       <% end %>
     </div>
