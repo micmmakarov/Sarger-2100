@@ -22,19 +22,21 @@
 
 </li>
 
-
+<% num = 0 %>
 <% challenge.challenges.each do |c| %>
 
 <li style="padding-left:20px;">
       <div style="margin-left:20px;background:#EEEEEE;">
+        <% num += 1 %>
+        <%= num %>
         <%= c.id %><br>
         <%= c.title %><br>
         <%=  c.description %>
         COMPLETE: <%= render :partial => "complete", :locals => {:ch => c} %>
-
+       <%= link_to "Showwww", c %>
       </div>
 
-<%=  render :partial => "show", :locals => {:challenge => c} %>
+<%  #render :partial => "show", :locals => {:challenge => c} %>
 
 </li>
 
