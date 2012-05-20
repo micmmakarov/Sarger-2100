@@ -27,15 +27,18 @@
 
 <li style="padding-left:20px;">
       <div style="margin-left:20px;background:#EEEEEE;">
+        subtasks:<%= c.challenges.length  %>
         <% num += 1 %>
         <%= num %>
-        <%= c.id %><br>
+        <!-- <%= c.id %><br> -->
         <%= c.title %><br>
         <%=  c.description %>
         COMPLETE:
         <%= render :partial => "complete", :locals => {:ch => c} %>
         
+        <% if c.challenges.length > 0 %> <!-- see if there any children? if no -> we dont need to show the link to the next level -->
        <%= link_to "Showwww", c %>
+        <% end %>
       </div>
 
 <%  #render :partial => "show", :locals => {:challenge => c} %>
