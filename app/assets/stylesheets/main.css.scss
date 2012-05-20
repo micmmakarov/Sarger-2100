@@ -48,6 +48,29 @@ input[type=checkbox] {
   float: left;
   margin-right: 4px;
 }
+h1.logo {
+  margin: 20px 0 0;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #5B8737;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8)
+}
+.home-index {
+  .main-content {
+    background-image: url(couple.png);
+    background-repeat: no-repeat;
+    background-position: center 70px;
+  }
+}
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 5% 10px;
+}
 
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px) {
