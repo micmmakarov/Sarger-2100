@@ -64,12 +64,30 @@ h2 {
     background-position: center 70px;
   }
 }
+.main-header {
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 5% 10px;
+  background: green;
+  color: white;
+  z-index: 100;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+}
 .main-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: 0 5% 10px;
+  padding: 0 5% 10px;
+  z-index: 100;
+}
+.content-top-offset {
+  padding-top: 50px;
 }
 
 /* iPhone [portrait + landscape] */

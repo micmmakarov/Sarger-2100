@@ -1,20 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="row content-top-offset">
 
-<div class="challenges">
-  <% if admin_signed_in?  %>
-  <%=  render :partial => "tree", :locals => {:challenge => @challenge} %>
-  <% else %>
-      <%=  render :partial => "show", :locals => {:challenge => @challenge} %>
-<% end %>
+  <div class="twelve columns">
+
+    <div class="row">
+
+      <p id="notice"><%= notice %></p>
+
+      <div class="challenges">
+        <% if admin_signed_in?  %>
+        <%=  render :partial => "tree", :locals => {:challenge => @challenge} %>
+        <% else %>
+            <%=  render :partial => "show", :locals => {:challenge => @challenge} %>
+      <% end %>
+      </div>
+
+      <% if admin_signed_in?  %>
+
+          <%= render "add_challenge" %>
+
+          <!-- edit current challenge links -->
+          <%= link_to 'Edit', edit_challenge_path(@challenge) %> |
+          <%= link_to 'Back', challenges_path %>
+
+
+      <% end %>
+
+    </div>
+
+  </div>
+
 </div>
-
-<% if admin_signed_in?  %>
-
-    <%= render "add_challenge" %>
-
-    <!-- edit current challenge links -->
-    <%= link_to 'Edit', edit_challenge_path(@challenge) %> |
-    <%= link_to 'Back', challenges_path %>
-
-
-<% end %>
