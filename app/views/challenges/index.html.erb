@@ -1,18 +1,30 @@
-<h1>Challenges</h1>
+<div class="row content-top-offset">
 
-<ul class="challenge-list">
-  <% @challenges.each do |challenge| %>
-  <li>
-    <h3><%= link_to challenge.title, challenge %></h3>
-    <p><%= challenge.description %></p>
-    <% if admin_signed_in?  %>
-    <p><%= link_to 'Edit', edit_challenge_path(challenge) %> | 
-      <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %></p>
-    <% end %>
-  </li>
-  <% end %>
-</ul>
+  <div class="twelve columns">
 
-<% if admin_signed_in?  %>
-  <%= link_to 'New Challenge', new_challenge_path, :class => 'button' %>
-<% end %>
+    <div class="row">
+
+      <h1>Challenges</h1>
+
+      <ul class="challenge-list">
+        <% @challenges.each do |challenge| %>
+        <li>
+          <h3><%= link_to challenge.title, challenge %></h3>
+          <p><%= challenge.description %></p>
+          <% if admin_signed_in?  %>
+          <p><%= link_to 'Edit', edit_challenge_path(challenge) %> | 
+            <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %></p>
+          <% end %>
+        </li>
+        <% end %>
+      </ul>
+
+      <% if admin_signed_in?  %>
+        <%= link_to 'New Challenge', new_challenge_path, :class => 'button' %>
+      <% end %>
+
+    </div>
+
+  </div>
+
+</div>
