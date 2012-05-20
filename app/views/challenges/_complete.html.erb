@@ -1,8 +1,10 @@
 
 <% if in?  %>
-    <% if current_guy.can_complete?(ch) %>
 
     <div class="complete_<%= ch.id %>">
+
+    <% if current_guy.can_complete?(ch) %>
+
 
       <%	url= "/complete/" +  ch.id.to_s	%>
       <%= form_for(ch, :url => url,
@@ -14,7 +16,11 @@
               <%= f.submit "Complete", class: "button nice small" %>
           <% end %>
       <% end %>
+
+    <% else %>
+       You need to complete challenges
+    <% end %>
+
     </div>
 
-    <% end %>
 <% end %>
