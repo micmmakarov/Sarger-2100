@@ -10,7 +10,12 @@
         <% if admin_signed_in?  %>
         <%=  render :partial => "tree", :locals => {:challenge => @challenge} %>
         <% else %>
-            <%=  render :partial => "show", :locals => {:challenge => @challenge} %>
+            <% if @challenge.more_levels? != [nil] %>
+                <%=  render :partial => "show", :locals => {:challenge => @challenge} %>
+            <% else %>
+                <%=  render :partial => "checklist", :locals => {:challenge => @challenge} %>
+            <% end %>
+            
       <% end %>
       </div>
 

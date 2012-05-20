@@ -1,0 +1,66 @@
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+This is fuckin' checklist<br>
+<ul class="challenge-list">
+  <li>
+    <h4><%= challenge.title %></h4>
+
+    <%=  challenge.description %>
+    <!-- compleate?? -->
+    <%= render :partial => "complete", :locals => {:ch => challenge} %>
+
+
+    <% if current_guy.complete?(challenge) %>
+        Mission Completed!!! Yahoo!!
+    <% else %>
+
+    <% end %>
+
+    <%= link_to 'Show', challenge %>
+
+    <% if admin_signed_in?  %>
+        <%= link_to 'Edit', edit_challenge_path(challenge) %>
+        <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %>
+    <% end %>
+
+  </li>
+
+  <% num = 0 %>
+  <% challenge.challenges.each do |c| %>
+
+      <li style="padding-left:20px;">
+        <div style="margin-left:20px;background:#EEEEEE;">
+          subtasks:<%= c.challenges.length  %>
+          <% num += 1 %>
+          <%= num %>
+          <!-- <%= c.id %><br> -->
+          <%= c.title %><br>
+          <%=  c.description %>
+          COMPLETE:
+          <%= render :partial => "complete", :locals => {:ch => c} %>
+
+          <% if c.challenges.length > 0 %> <!-- see if there any children? if no -> we dont need to show the link to the next level -->
+              <%= link_to "Showwww", c %>
+          <% end %>
+        </div>
+
+        <%  #render :partial => "show", :locals => {:challenge => c} %>
+
+      </li>
+
+  <% end %>
+
+</ul>
