@@ -37,7 +37,9 @@
         <%= render :partial => "complete", :locals => {:ch => c} %>
         
         <% if c.challenges.length > 0 %> <!-- see if there any children? if no -> we dont need to show the link to the next level -->
-       <%= link_to "Showwww", c %>
+
+        <%= link_to "Showwww", c %>
+
         <% end %>
       </div>
 
