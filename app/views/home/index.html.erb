@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row content-top-offset">
 
   <div class="twelve columns">
 
@@ -10,6 +10,11 @@
       </hgroup>
 
       <div class="panel">
+        
+        <% if !in? %>
+          <p><%= link_to "Sign In", "users/sign_in" %></p>
+          <p><%= link_to "Enter As Guest", "temps/sign_up" %></p>
+        <% end %>
 
         <% if temp_signed_in? %>
           <p>Welcome, <%= current_temp.name %> (signed in as a guest)</p>
@@ -27,7 +32,9 @@
 
   <footer class="main-footer">
     <div class="row">
-      <%= link_to "Start the Game", "/challenges", :class => "button nice green" %>
+      <% if in? %>
+        <%= link_to "Start the Game", "/challenges", :class => "button nice green" %>
+      <% end %>
     </div>
   </footer>
 
