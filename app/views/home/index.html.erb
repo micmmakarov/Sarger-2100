@@ -4,29 +4,33 @@
 
     <div class="row">
 
-      <hgroup class="center-text">
-        <h1 class="logo"><%= image_tag("sarger-logo.png", :alt => "Sarger") %></h1>
-        <h2>Overcome approach anxiety!</h2>
-      </hgroup>
-
-      <div class="panel">
+      <div class="sides-offset">
         
-        <% if !in? %>
-          <p><%= link_to "Sign In", "users/sign_in" %></p>
-          <p><%= link_to "Enter As Guest", "temps/sign_up" %></p>
-        <% end %>
+        <hgroup class="center-text">
+          <h1 class="logo"><%= image_tag("sarger-logo.png", :alt => "Sarger") %></h1>
+          <h2>Overcome approach anxiety!</h2>
+        </hgroup>
 
-        <% if temp_signed_in? %>
-          <p>Welcome, <%= current_temp.name %> (signed in as a guest)</p>
-        <% end %>
+        <div class="panel">
 
-        <% if temp_signed_in? %>
-          <p><%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
-        <% end %>
+          <% if !in? %>
+            <p><%= link_to "Sign In", "users/sign_in" %></p>
+            <p><%= link_to "Enter As Guest", "temps/sign_up" %></p>
+          <% end %>
 
+          <% if temp_signed_in? %>
+            <p>Welcome, <%= current_temp.name %> (signed in as a guest)</p>
+          <% end %>
+
+          <% if temp_signed_in? %>
+            <p><%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
+          <% end %>
+
+        </div> <!-- /sides-offset -->  
+        
       </div>
 
-    </div>
+    </div> <!-- /row -->
 
   </div>
 

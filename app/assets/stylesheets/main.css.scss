@@ -8,11 +8,20 @@ body {
 .center-text {
   text-align: center;
 }
+body .sides-offset {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .main-content {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto -40px;
+  
+  &.container {
+    padding: 0;
+  }
+  
   h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -22,11 +31,11 @@ body {
   background: #D6FC57;
 }
 .challenge-list {
-  
-}
-.challenge-list li {
-  position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  li {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 0 5%;
+  }
 }
 .challenge-list li:active {
   background: #444;
@@ -63,6 +72,11 @@ h2 {
     background-repeat: no-repeat;
     background-position: center 70px;
   }
+  .main-header {
+    .go-back {
+      display: none;
+    }
+  }
 }
 .main-header {
   height: 30px;
@@ -77,6 +91,16 @@ h2 {
   text-align: center;
   font-weight: 700;
   font-size: 1.5em;
+  
+  .bar-button {
+    background: #004d00;
+    padding: 7px;
+    &.left {
+      position: absolute;
+      left: 5%;
+      top: 10px;
+    }
+  }
 }
 .main-footer {
   position: fixed;
@@ -89,6 +113,7 @@ h2 {
 .content-top-offset {
   padding-top: 60px;
 }
+
 
 /* iPhone [portrait + landscape] */
 @media only screen and (max-width: 480px) {
