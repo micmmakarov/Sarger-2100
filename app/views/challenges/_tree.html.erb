@@ -1,16 +1,9 @@
 <div style="margin-left:20px;background:#EEEEEE;">
-  <%= challenge.id %><br>
-  <%= challenge.title %><br>
+  <p><%= challenge.title %> (ID: <%= challenge.id %>)</p>
+  
 <%=  challenge.description %>
   <!-- compleate?? -->
   COMPLETE: <%= render :partial => "complete", :locals => {:ch => challenge} %>
-
-
-  <% if 1 #current_user.complete?(challenge) %>
-    Mission Compleated!!! Yahoo!!
-  <% else %>
-
-  <% end %>
 
   <%= link_to 'Show', challenge %>
 
