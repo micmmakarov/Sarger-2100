@@ -32,7 +32,9 @@
         <%= c.id %><br>
         <%= c.title %><br>
         <%=  c.description %>
-        COMPLETE: <%= render :partial => "complete", :locals => {:ch => c} %>
+        COMPLETE:
+        <%= render :partial => "complete", :locals => {:ch => c} %>
+        
        <%= link_to "Showwww", c %>
       </div>
 

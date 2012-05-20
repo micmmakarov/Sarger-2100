@@ -23,4 +23,25 @@ class Temp < ActiveRecord::Base
     p.destroy
   end
 
+  def can_complete?(challenge)
+    # 1. have children
+    # 2. children are completed
+    if challenge.challenges.present?
+      ch = 1
+      challenge.challenges.each do |c|
+        if complete?(c)
+        else
+          ch = 0
+        end
+      end
+    else
+      ch = 1
+    end
+    if ch==1
+      "Ha!"
+    end
+
+  end
+
+
 end

@@ -1,4 +1,6 @@
-<% if in? then %>
+
+<% if in?  %>
+    <% if current_guy.can_complete?(ch) %>
 
     <div class="complete_<%= ch.id %>">
 
@@ -14,4 +16,5 @@
       <% end %>
     </div>
 
+    <% end %>
 <% end %>
