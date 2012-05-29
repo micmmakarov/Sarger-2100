@@ -8,6 +8,9 @@ body {
 .center-text {
   text-align: center;
 }
+#notice {
+  margin: 0;
+}
 body .sides-offset {
   padding-left: 5%;
   padding-right: 5%;
@@ -30,17 +33,62 @@ body .sides-offset {
 .style-green {
   background: #D6FC57;
 }
+.auth-stuff {
+  p {
+    font-size: 18px;
+  }
+}
 .challenge-list {
+  border-top: 1px solid rgba(0, 0, 0, .1);
   li {
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-    padding: 0 5%;
+    padding: 10px 5%;
+    margin: 0;
+    min-height: 62px;
+    .task-number {
+      position: absolute;
+      left: 5px;
+      top: 10px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 1px 0 rgba(0,0,0,.5);
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 32px;
+      color: gray;
+    }
   }
+  p {
+    font-size: 18px;
+    margin: 5px 0 0;
+  }
+  .desc {
+    font-size: 2.1em;
+    margin: 5px 0 10px;
+  }
+  .status {
+    font-size: 16px;
+  }
+  
 }
-.challenge-list li:active {
+.challenge-list li.clickable:active {
   background: #444;
   p, h3 a {
     color: #fff;
+  }
+}
+.title-a {
+  background: #444;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 2em;
   }
 }
 
@@ -72,10 +120,16 @@ h2 {
     background-repeat: no-repeat;
     background-position: center 70px;
   }
-  .main-header {
-    .go-back {
-      display: none;
-    }
+  .go-back {
+    display: none;
+  }
+}
+.main-header {
+  .page-title {
+    display: inline-block;
+    vertical-align: middle;
+    color: #D6FC57;
+    font-size: 1.2em;
   }
 }
 .main-header {
@@ -111,7 +165,7 @@ h2 {
   z-index: 100;
 }
 .content-top-offset {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 

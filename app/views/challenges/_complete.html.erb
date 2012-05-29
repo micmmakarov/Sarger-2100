@@ -5,7 +5,6 @@
 
     <% if current_guy.can_complete?(ch) %>
 
-
       <%	url= "/complete/" +  ch.id.to_s	%>
       <%= form_for(ch, :url => url,
                    html: { method: :post }, class: 'complete_form',

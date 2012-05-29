@@ -1,19 +1,21 @@
+<div class="title-a sides-offset">
+  <h3><%= challenge.title %></h3>
+</div><!-- .title-a -->
+
 <ul class="challenge-list">
 <li>
-  <h4><%= challenge.title %></h4>
 
-<%=  challenge.description %>
-  <!-- compleate?? -->
-  <%= render :partial => "complete", :locals => {:ch => challenge} %>
+  <p class="desc"><%=  challenge.description %></p>
+  <!-- complete? -->
+  <div class="status">
+    <%= render :partial => "complete", :locals => {:ch => challenge} %>
 
+    <% if current_guy.complete?(challenge) %>
+    Mission Completed!!! Yahoo!!
+    <% else %>
 
-  <% if current_guy.complete?(challenge) %>
-  Mission Completed!!! Yahoo!!
-  <% else %>
-
-  <% end %>
-
-  <%= link_to 'Show', challenge %>
+    <% end %>
+  </div>
 
   <% if admin_signed_in?  %>
       <%= link_to 'Edit', edit_challenge_path(challenge) %>
@@ -26,13 +28,17 @@
 <% challenge.challenges.each do |c| %>
 
 <li style="padding-left:20px;">
-      <div style="margin-left:20px;background:#EEEEEE;">
-        subtasks:<%= c.challenges.length  %>,
-        <% num += 1 %>
-        <%= num %>
+
+  <div class="task-number">
+    <% num += 1 %>
+    <%= num %>
+  </div><!-- .task-number -->
+
+      <div style="margin-left:20px">
+        Subtasks: <%= c.challenges.length  %>,
         <!-- <%= c.id %><br> -->
         <%= c.title %><br>
-        <%=  c.description %>
+        <p><%=  c.description %></p>
         COMPLETE:
         <%= render :partial => "complete", :locals => {:ch => c} %>
         

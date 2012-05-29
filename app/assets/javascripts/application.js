@@ -17,4 +17,19 @@ $(function () {
     
   });
   
+  $('ul').find('li').click(function(e) {
+    var href = $(this).find('a').attr('href');
+    if(typeof href !== 'undefined') {
+      window.location = href;
+    } else {
+      // $(this).find('input[type=submit]').submit();
+    }
+  });
+  
+  $.each($('ul').find('li'), function() {
+    if($(this).find('a').length > 0) {
+      $(this).addClass('clickable');
+    }
+  })
+  
 });
