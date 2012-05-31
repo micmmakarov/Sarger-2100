@@ -115,6 +115,9 @@ h2 {
   text-shadow: 0 1px 0 rgba(255,255,255,.8)
 }
 .home-index {
+  .main-header {
+    display: none;
+  }
   .main-content {
     background-image: url(couple.png);
     background-repeat: no-repeat;
@@ -122,14 +125,6 @@ h2 {
   }
   .go-back {
     display: none;
-  }
-}
-.main-header {
-  .page-title {
-    display: inline-block;
-    vertical-align: middle;
-    color: #D6FC57;
-    font-size: 1.2em;
   }
 }
 .main-header {
@@ -154,6 +149,12 @@ h2 {
       left: 5%;
       top: 10px;
     }
+  }
+  .page-title {
+    display: inline-block;
+    vertical-align: middle;
+    color: #D6FC57;
+    font-size: 1.2em;
   }
 }
 .main-footer {
