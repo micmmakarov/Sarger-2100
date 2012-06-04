@@ -41,7 +41,7 @@ body .sides-offset {
 }
 .challenge-list {
   border-top: 1px solid rgba(0, 0, 0, .1);
-  li {
+  > li {
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     padding: 10px 5%;
@@ -73,16 +73,22 @@ body .sides-offset {
   .status {
     font-size: 16px;
   }
-  li:first-child {
-    background: #e6fd9a;
-    .desc {
-      font-size: 2.1em;
-      margin: 5px 0 10px;
-      line-height: 1em;
+}
+
+.challenges-show {
+  .challenge-list {
+    li:first-child {
+      background: #e6fd9a;
+      .desc {
+        font-size: 2.1em;
+        margin: 5px 0 10px;
+        line-height: 1em;
+      }
     }
   }
-  
 }
+
+
 .challenge-list li.clickable:active {
   background: #444;
   p, h3 a {
