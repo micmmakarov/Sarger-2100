@@ -35,11 +35,10 @@
   </div><!-- .task-number -->
 
       <div style="margin-left:20px">
-        Subtasks: <%= c.challenges.length  %>,
+        <!-- Subtasks: <%= c.challenges.length  %> -->
         <!-- <%= c.id %><br> -->
         <h4><%= c.title %></h4>
         <p class="desc"><%=  c.description %></p>
-        COMPLETE:
         <%= render :partial => "complete", :locals => {:ch => c} %>
         
         <% if c.challenges.length > 0 %> <!-- see if there any children? if no -> we dont need to show the link to the next level -->
