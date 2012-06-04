@@ -37,10 +37,16 @@
       <div style="margin-left:20px">
         <!-- Subtasks: <%= c.challenges.length  %> -->
         <!-- <%= c.id %><br> -->
+        <div class=row>
+        <div class="eight columns phone-three">
         <h4><%= c.title %></h4>
+        </div>
+          <div class="four columns phone-one">
+          <%= render :partial => "complete", :locals => {:ch => c} %>
+           </div>
+        </div>
         <p class="desc"><%=  c.description %></p>
-        <%= render :partial => "complete", :locals => {:ch => c} %>
-        
+
         <% if c.challenges.length > 0 %> <!-- see if there any children? if no -> we dont need to show the link to the next level -->
 
         <%= link_to "Showwww", c %>
