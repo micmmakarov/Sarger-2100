@@ -22,19 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="temp.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/temp.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_complete.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/challenges/_complete.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="38" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
+            <state line="19" column="38" selection-start="589" selection-end="589" vertical-scroll-proportion="-14.928572">
               <folding />
             </state>
           </provider>
@@ -61,7 +52,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/challenges/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="53" selection-start="352" selection-end="352" vertical-scroll-proportion="-0.78571427">
+            <state line="16" column="24" selection-start="580" selection-end="580" vertical-scroll-proportion="-1.5714285">
               <folding />
             </state>
           </provider>
@@ -70,7 +61,7 @@
       <file leaf-file-name="_checklist.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/challenges/_checklist.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,19 +76,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="40" selection-start="593" selection-end="593" vertical-scroll-proportion="0.18470149">
+            <state line="21" column="40" selection-start="593" selection-end="593" vertical-scroll-proportion="-2.357143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="create.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/challenges/create.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.js.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/progresses/create.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+            <state line="4" column="61" selection-start="494" selection-end="494" vertical-scroll-proportion="0.23741007">
               <folding />
             </state>
           </provider>
@@ -129,7 +129,6 @@
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/temp.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/views/progresses/create.js.erb" />
         <option value="$PROJECT_DIR$/app/views/challenges/_complete.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/challenges/_form.html.erb" />
@@ -138,6 +137,7 @@
         <option value="$PROJECT_DIR$/app/models/challenge.rb" />
         <option value="$PROJECT_DIR$/app/views/challenges/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/progresses/create.js.erb" />
       </list>
     </option>
   </component>
@@ -780,11 +780,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="3" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" />
@@ -815,13 +810,6 @@
         <state line="47" column="0" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/challenges/_complete.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="38" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/challenges_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="3" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" />
@@ -836,26 +824,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/challenges/_checklist.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/progresses/create.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/challenge.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/challenges/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="352" selection-end="352" vertical-scroll-proportion="-0.78571427">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
@@ -865,7 +841,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="593" selection-end="593" vertical-scroll-proportion="0.18470149">
+        <state line="21" column="40" selection-start="593" selection-end="593" vertical-scroll-proportion="-2.357143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="24" selection-start="580" selection-end="580" vertical-scroll-proportion="-1.5714285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/_complete.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="38" selection-start="589" selection-end="589" vertical-scroll-proportion="-14.928572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/create.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/progresses/create.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="61" selection-start="494" selection-end="494" vertical-scroll-proportion="0.23741007">
           <folding />
         </state>
       </provider>
