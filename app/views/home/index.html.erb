@@ -18,13 +18,13 @@
             <p><%= link_to "Enter As Guest", "temps/sign_up" %></p>
           <% end %>
 
-          <% if in? %>
+          <% if user_signed_in? %>
             <p>Welcome, <%= current_user.name %>!</p>
             <p><%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
           <% end %>
 
           <% if temp_signed_in? %>
-            <p>Welcome, <%= current_temp.name %> (signed in as a guest)</p>
+            <p>Welcome, <%= current_guy.name %> (signed in as a guest)</p>
           <% end %>
 
           <% if temp_signed_in? %>
