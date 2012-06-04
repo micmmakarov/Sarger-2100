@@ -37,8 +37,8 @@
       <div style="margin-left:20px">
         Subtasks: <%= c.challenges.length  %>,
         <!-- <%= c.id %><br> -->
-        <%= c.title %><br>
-        <p><%=  c.description %></p>
+        <h4><%= c.title %></h4>
+        <p class="desc"><%=  c.description %></p>
         COMPLETE:
         <%= render :partial => "complete", :locals => {:ch => c} %>
         
