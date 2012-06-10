@@ -46,7 +46,7 @@ body .sides-offset {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     padding: 10px 5%;
     margin: 0;
-    min-height: 62px;
+    min-height: 46px;
     .task-number {
       position: absolute;
       left: 5px;
@@ -61,6 +61,9 @@ body .sides-offset {
       font-size: 20px;
       line-height: 32px;
       color: gray;
+    }
+    &.not_yet {
+      opacity: .5;
     }
     &.top-list-item {
       input.button {
