@@ -213,11 +213,13 @@ h2 {
   a.button {
     font-size: 1.6em; // Michael changed!
   }
-  .button.half {
-    width: 37%;
-    float: left;
-    &.right-half {
-      margin-left: 2%;
+  .devise-links {
+    li {
+      width: 46%;
+      float: left;
+      &:nth-child(2) {
+        margin-left: 2%;
+      }
     }
   }
   .challenge-list {
