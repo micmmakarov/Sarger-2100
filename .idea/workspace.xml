@@ -25,7 +25,7 @@
       <file leaf-file-name="main.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="4" selection-start="4449" selection-end="4449" vertical-scroll-proportion="0.0">
+            <state line="215" column="4" selection-start="4495" selection-end="4495" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,16 +43,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="1" selection-start="101" selection-end="101" vertical-scroll-proportion="0.30783582">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_links.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/temps/_links.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="5" selection-start="0" selection-end="1124" vertical-scroll-proportion="-7.857143">
+            <state line="3" column="39" selection-start="53" selection-end="53" vertical-scroll-proportion="0.18470149">
               <folding />
             </state>
           </provider>
@@ -61,7 +52,7 @@
       <file leaf-file-name="_links.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/devise/_links.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="3" selection-start="280" selection-end="280" vertical-scroll-proportion="-3.9285715">
+            <state line="8" column="3" selection-start="341" selection-end="341" vertical-scroll-proportion="-3.9285715">
               <folding />
             </state>
           </provider>
@@ -817,23 +808,16 @@
         <state line="12" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/temps/_links.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="5" selection-start="0" selection-end="1124" vertical-scroll-proportion="-7.857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/_links.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="3" selection-start="280" selection-end="280" vertical-scroll-proportion="-3.9285715">
+        <state line="8" column="3" selection-start="341" selection-end="341" vertical-scroll-proportion="-3.9285715">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="4" selection-start="4449" selection-end="4449" vertical-scroll-proportion="0.0">
+        <state line="215" column="4" selection-start="4495" selection-end="4495" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -847,7 +831,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="101" selection-end="101" vertical-scroll-proportion="0.30783582">
+        <state line="3" column="39" selection-start="53" selection-end="53" vertical-scroll-proportion="0.18470149">
           <folding />
         </state>
       </provider>
