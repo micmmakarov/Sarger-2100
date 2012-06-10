@@ -28,7 +28,7 @@ body .sides-offset {
   h2 {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 .style-green {
@@ -62,12 +62,20 @@ body .sides-offset {
       line-height: 32px;
       color: gray;
     }
+    .numbered-list-item {
+      h4, p.desc {
+        padding-left: 9%;
+      }
+      form {
+        margin: 0;
+      }
+    }
   }
   p {
     font-size: 18px;
     margin: 0 0 5px;
     &.desc {
-      margin: 12px 0 5px;
+      margin: 8px 0 5px;
     }
   }
   .status {
@@ -142,6 +150,9 @@ h2 {
   .go-back {
     display: none;
   }
+  hgroup h2 {
+    margin-top: 0;
+  }
 }
 .main-header {
   height: 30px;
@@ -211,7 +222,9 @@ h2 {
   }
   button.button, input[type="submit"].button,
   a.button {
-    font-size: 1.6em; // Michael changed!
+    font-size: 1.4em; // Michael changed!
+    padding-left: 6px;
+    padding-right: 6px;
   }
   .devise-links {
     li {
@@ -226,8 +239,8 @@ h2 {
     li {
       input.button {
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 4px;
+        right: 0;
          /*max-width: 40%;*/
       }
     }

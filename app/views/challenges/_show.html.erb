@@ -3,61 +3,61 @@
 </div><!-- .title-a -->
 
 <ul class="challenge-list">
-<li>
+  <li>
 
-  <p class="desc"><%=  challenge.description %></p>
-  <!-- complete? -->
-  <div class="status">
-    <%= render :partial => "complete", :locals => {:ch => challenge} %>
+    <p class="desc"><%=  challenge.description %></p>
+    <!-- complete? -->
+    <div class="status">
+      <%= render :partial => "complete", :locals => {:ch => challenge} %>
 
-    <% if current_guy.complete?(challenge) %>
-    Mission Completed!!! Yahoo!!
-    <% else %>
+      <% if current_guy.complete?(challenge) %>
+      Mission Completed!!! Yahoo!!
+      <% else %>
 
+      <% end %>
+    </div>
+
+    <% if admin_signed_in?  %>
+        <%= link_to 'Edit', edit_challenge_path(challenge) %>
+        <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %>
     <% end %>
-  </div>
 
-  <% if admin_signed_in?  %>
-      <%= link_to 'Edit', edit_challenge_path(challenge) %>
-      <%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %>
+  </li>
+
+  <% num = 0 %>
+  <% challenge.challenges.each do |c| %>
+
+  <li style="padding-left:20px;">
+
+    <div class="task-number">
+      <% num += 1 %>
+      <%= num %>
+    </div><!-- .task-number -->
+
+        <div class="numbered-list-item">
+          <!-- Subtasks: <%= c.challenges.length  %> -->
+          <!-- <%= c.id %><br> -->
+          <div class="row">
+            <div class="eight columns phone-three">
+              <h4><%= c.title %></h4>
+              <p class="desc"><%=  c.description %></p>
+            </div>
+            <div class="four columns phone-one">
+            <%= render :partial => "complete", :locals => {:ch => c} %>
+             </div>
+          </div>
+
+          <% if c.challenges.length > 0 %> <!-- see if there any children? if no -> we dont need to show the link to the next level -->
+
+          <%= link_to "Showwww", c %>
+
+          <% end %>
+        </div>
+
+  <%  #render :partial => "show", :locals => {:challenge => c} %>
+
+  </li>
+
   <% end %>
-
-</li>
-
-<% num = 0 %>
-<% challenge.challenges.each do |c| %>
-
-<li style="padding-left:20px;">
-
-  <div class="task-number">
-    <% num += 1 %>
-    <%= num %>
-  </div><!-- .task-number -->
-
-      <div style="margin-left:20px">
-        <!-- Subtasks: <%= c.challenges.length  %> -->
-        <!-- <%= c.id %><br> -->
-        <div class=row>
-        <div class="eight columns phone-three">
-        <h4><%= c.title %></h4>
-        </div>
-          <div class="four columns phone-one">
-          <%= render :partial => "complete", :locals => {:ch => c} %>
-           </div>
-        </div>
-        <p class="desc"><%=  c.description %></p>
-
-        <% if c.challenges.length > 0 %> <!-- see if there any children? if no -> we dont need to show the link to the next level -->
-
-        <%= link_to "Showwww", c %>
-
-        <% end %>
-      </div>
-
-<%  #render :partial => "show", :locals => {:challenge => c} %>
-
-</li>
-
-<% end %>
 
 </ul>
