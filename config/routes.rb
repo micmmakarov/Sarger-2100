@@ -7,6 +7,7 @@ Sarger::Application.routes.draw do
 
   devise_for :users
 
+  get "active_users" => "home#active_users"
   get "home/index"
   get "home/win"
   post 'complete/:id' => "progresses#create"

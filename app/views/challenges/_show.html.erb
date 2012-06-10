@@ -25,9 +25,12 @@
   </li>
 
   <% num = 0 %>
+  <% completable = "completable" %>
+
   <% challenge.challenges.each do |c| %>
 
-  <li style="padding-left:20px;">
+
+      <li style="padding-left:20px;" style="<%= completable %>">
 
     <div class="task-number">
       <% num += 1 %>
@@ -58,6 +61,8 @@
 
   </li>
 
-  <% end %>
+      <% completable = "not_yet" if current_guy.complete?(c) %>
+
+<% end %>
 
 </ul>
