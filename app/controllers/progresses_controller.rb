@@ -6,6 +6,7 @@ class ProgressesController < ApplicationController
       current_guy.uncomplete!(@challenge)
     else
       current_guy.complete!(@challenge)
+      current_guy.complete!(@challenge.challenge) if current_guy.can_complete?(@challenge.challenge)
     end
 
     respond_to do |format|
