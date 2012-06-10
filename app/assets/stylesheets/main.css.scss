@@ -62,6 +62,11 @@ body .sides-offset {
       line-height: 32px;
       color: gray;
     }
+    &.top-list-item {
+      input.button {
+        position: relative;
+      }
+    }
     .numbered-list-item {
       h4, p.desc {
         padding-left: 9%;

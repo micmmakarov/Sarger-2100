@@ -3,7 +3,7 @@
 </div><!-- .title-a -->
 
 <ul class="challenge-list">
-  <li>
+  <li class="top-list-item">
 
     <p class="desc"><%=  challenge.description %></p>
     <!-- complete? -->
@@ -11,7 +11,7 @@
       <%= render :partial => "complete", :locals => {:ch => challenge} %>
 
       <% if current_guy.complete?(challenge) %>
-      Mission Completed!!! Yahoo!!
+      <p>Challenge completed!</p>
       <% else %>
 
       <% end %>
