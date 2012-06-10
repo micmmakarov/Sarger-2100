@@ -2,7 +2,11 @@ $(".complete_<%= @challenge.id %>").html("<%=  escape_javascript(render :partial
 $(".complete_<%= @challenge.challenge.id %>").html("<%=  escape_javascript(render :partial => "challenges/complete", :locals => {:ch => @challenge.challenge}) %>");
 <% if current_guy.can_complete?(@challenge.challenge) %>
 alert("Congrats man, u completed the task and going back, man!");
+<% if @challenge.challenge.challenge.present? %>
 window.location = "<%= url_for(@challenge.challenge.challenge) %>";
+<% else %>
+window.location = "<%= url_for :controller => "home", :action => "win" %>";
+<% end %>
 // <%=url_for(@challenge.challenge.challenge) %>
 // <%=url_for(@challenge.challenge) %>
 // <%=url_for(@challenge) %>
